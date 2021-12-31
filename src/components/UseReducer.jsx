@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 const initialState = 0;
+import Chiled from "./Chiled";
 const reducer = (state, action) => {
   switch (action) {
     case "increment":
@@ -13,7 +14,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
-function UseReducer() {
+function UseReducer({ children }) {
   const [count, dispatch] = useReducer(reducer, initialState);
   console.log("object");
 
@@ -23,6 +24,7 @@ function UseReducer() {
       <button onClick={() => dispatch("increment")}>increment</button>
       <button onClick={() => dispatch("reset")}>reset</button>
       <button onClick={() => dispatch("decrement")}>decrement</button>
+      <Chiled></Chiled>
     </div>
   );
 }
