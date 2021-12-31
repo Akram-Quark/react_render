@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
-const initialState = 0;
 import Chiled from "./Chiled";
+
+const initialState = 0;
 const reducer = (state, action) => {
   switch (action) {
     case "increment":
